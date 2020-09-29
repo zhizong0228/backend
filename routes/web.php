@@ -13,8 +13,8 @@
 
 Route::get('/', 'FrontController@index');
 Route::get('/news', 'FrontController@news');
-Route::get('/news_info', 'FrontController@news_info');
-Route::get('/contact_us', 'FrontController@contact_us');
+Route::get('/news_info/{news_id}', 'FrontController@news_info');
+Route::get('/contact_us/{news_id}', 'FrontController@contact_us');
 
 Auth::routes();
 
