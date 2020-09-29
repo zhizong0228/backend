@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontController extends Controller
 {
     public function index()
     {
-        return view('front/index');
+        //抓取資料
+        $news_list = DB::table('news')
+                    ->orderBy('id', 'desc')
+                    ->take(3)
+                    ->get();
+
+        // dd($news_list);
+        return view('front/index',compact('news_list'));
     }
 
     public function news()
