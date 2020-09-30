@@ -14,7 +14,9 @@
 Route::get('/', 'FrontController@index');
 Route::get('/news', 'FrontController@news');
 Route::get('/news_info/{news_id}', 'FrontController@news_info');
-Route::get('/contact_us/{news_id}', 'FrontController@contact_us');
+Route::get('/contact_us', 'FrontController@contact_us');
+Route::get('/store_coutact', 'FrontController@store_coutact');
+
 
 Auth::routes();
 

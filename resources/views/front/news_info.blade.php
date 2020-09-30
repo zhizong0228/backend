@@ -17,7 +17,7 @@
     @endsection
 
     @section('content')
-    <section class="news_info">
+    {{-- <section class="news_info">
         <div class="container">
             <h2 class="info_title">中台灣推薦秘境景點</h2>
             <div class="row">
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     @endsection
 
 

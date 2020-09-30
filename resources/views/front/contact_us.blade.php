@@ -22,10 +22,11 @@
                 <li>注意事項</li>
             </ol>
         </div>
-        <form>
+        <form method="post" action="/store_coutact">
+            @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">您的信箱</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" name="" aria-describedby="emailHelp">
                 <small id="emailHelp" class="form-text text-muted">當景點入選時會通知您，並不會另作他用</small>
             </div>
             <div class="form-group">
@@ -53,6 +54,7 @@
             <button type="submit" class="btn btn-primary">送出審查</button>
         </form>
     </div>
+
 </section>
 @endsection
 

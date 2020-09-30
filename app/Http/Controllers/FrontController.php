@@ -30,18 +30,23 @@ class FrontController extends Controller
         {
 
         $news = DB::table('news')->where('id','=',$news_id)->first();
-        // dd($news_id);
+        dd($news_id);
 
         return view('front/news_info',compact('news'));
     }
 
     public function contact_us()
     {
-        $news_list = DB::table('news')
-        ->orderBy('id', 'desc')
-        ->take(3)
-        ->get();
+
         return view('front/contact_us');
+        // dd($request->all)
     }
+    public function store_coutact()
+    {
+
+        return view('store_coutact');
+
+    }
+    // public function store_coutact(Request $request)
 
 }
